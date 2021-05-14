@@ -2,7 +2,7 @@ let door1 = document.getElementById('door1');
 let door2 = document.getElementById('door2');
 let door3 = document.getElementById('door3');
 let startButton = document.getElementById('start');
-let botDoorPath = "images/robot.svg";
+let botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
 let beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
 let spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
 let closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
@@ -18,7 +18,7 @@ let bestStreak = document.getElementById('high-score-number');
 currentStreak.innerHTML = score;
 bestStreak.innerHTML = highScore;
 
-const isClicked = (door) => {
+const isClicked = door => {
   if (door.src == closedDoorPath) {
     return false;
   } else {
@@ -26,15 +26,15 @@ const isClicked = (door) => {
   }
 }
 
-const isBot = (door) => {
-  if (door.src === botDoorPath) {
+const isBot = door => {
+  if (door.src == botDoorPath) {
     return true;
   } else {
     return false;
   }
 }
 
-const playDoor = (door) => {
+const playDoor = door => {
   numClosedDoors--;
   if (numClosedDoors === 0) {
     gameOver('win');
@@ -116,7 +116,7 @@ const startRound = () => {
   randomChoreDoorGenerator();
 }
 
-const gameOver = (str) => {
+const gameOver = str => {
   if(str === 'win') {
     startButton.innerHTML = 'You win! Play again?';
     getYourScore();

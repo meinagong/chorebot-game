@@ -52,7 +52,7 @@ body {
 .start-row {
  margin: auto;
  width: 120px;
- height: 53px;
+ height: 50px;
  background-color: #0aac33;
  padding-top: 20px;
  font-family: 'Work Sans';
@@ -69,11 +69,11 @@ body {
 }
 
 .score-text {
- margin-right: 17px;
+ margin-right: 20px;
  padding: 5px;
  display: inline;
  font-family: 'Work Sans';
- font-size: 12px;
+ font-size: 14px;
  letter-spacing: 1.1px;
  color: #ffffff;
 }
